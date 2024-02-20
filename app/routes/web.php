@@ -20,6 +20,8 @@ Route::get('/', function () {
 
 Route::get('/tweet', \App\Http\Controllers\tweet\IndexController::class)
     ->name('tweet.index');
+Route::get('/tweet', \App\Http\Controllers\tweet\IndexController::class)
+    ->name('tweet.index');
 
 
 
