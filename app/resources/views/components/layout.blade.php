@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     <script href="{{ mix('/js/app.js') }}"></script>
+
     <title>{{ $title ?? 'つぶやきアプリ' }}</title>
     @stack('css')
 </head>
 <body class="bg-gray-50">
 {{ $slot }}
+<script href="{{ mix('/js/app.js') }}"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+
 </body>
 </html>

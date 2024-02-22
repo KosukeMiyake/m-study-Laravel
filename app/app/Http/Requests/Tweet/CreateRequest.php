@@ -25,8 +25,15 @@ class CreateRequest extends FormRequest
     {
         return [
             //
-            'tweet' => 'required|max:140'
+            'tweet' => 'required|max:140',
+            'images' => 'array|max:4',
+            'images.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048'
         ];
+    }
+
+    public function images()
+    {
+        return $this->file('images', []);
     }
 
     public function userId(): int
